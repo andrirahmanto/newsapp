@@ -8,10 +8,13 @@ import 'package:newsapp_bionic/features/news/presentaion/page/news_page.dart';
 import 'app/dependency.dart';
 import 'features/userauth/presentaion/controller/login_binding.dart';
 import 'features/userauth/presentaion/page/login_page.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   DependencyCreator.init();
   await GetStorage.init();
   runApp(const MyApp());

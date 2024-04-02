@@ -1,4 +1,4 @@
-package com.example.newsapp_bionic
+package com.andri.newsapp_bionic
 
 import io.flutter.embedding.android.FlutterActivity
 
