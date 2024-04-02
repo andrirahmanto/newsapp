@@ -23,6 +23,7 @@ class LoginController extends GetxController {
     try {
       await _googleSignInUseCase.signInWithGoogleSignIn();
       // Handle successful sign-in
+      Get.toNamed('/news');
     } catch (e) {
       final snackBar = SnackBar(
         content: Text('Failed to sign in with google sign in: $e'),

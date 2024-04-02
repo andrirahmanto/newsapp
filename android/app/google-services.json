@@ -12,7 +12,20 @@
           "package_name": "com.andri.newsapp_bionic"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "782082505519-1kjnujk1dl6fga0065puldi0306am42b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andri.newsapp_bionic",
+            "certificate_hash": "5d3e333a4e7eea796faa42d5905aa5fd47e65340"
+          }
+        },
+        {
+          "client_id": "782082505519-netbu0b0vems8077uc3nj648dtki7o8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBwufs06Ta4PMqDL9xLmorfLXOOsE223DQ"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782082505519-netbu0b0vems8077uc3nj648dtki7o8r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "782082505519-b38nlq81o76vdsa48hu51lhg29onbk65.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.andri.newsappBionic"
+              }
+            }
+          ]
         }
       }
     }

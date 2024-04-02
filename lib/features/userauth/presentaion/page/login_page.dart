@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
               SignInButton(
                 Buttons.google,
                 onPressed: () {
-                  Get.toNamed('/news');
+                  loginController.loginWithGoogleSignIn();
                 },
               )
             ],

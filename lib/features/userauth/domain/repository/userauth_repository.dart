@@ -1,5 +1,7 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 
+import 'package:firebase_auth/firebase_auth.dart';
+
 abstract class UserAuthRepository {
-  Future<void> signInWithGoogle();
+  Future<UserCredential> signInWithGoogle();
 }
