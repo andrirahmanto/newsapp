@@ -1,5 +1,3 @@
-// import 'package:firebase_auth/firebase_auth.dart';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../repository/userauth_repository.dart';
@@ -9,11 +7,10 @@ class GoogleSignInlUseCase {
 
   GoogleSignInlUseCase(this._userRepository);
 
-  Future<UserCredential> signInWithGoogleSignIn() async {
+  Future<void> signInWithGoogleSignIn() async {
     try {
-      UserCredential credential = await _userRepository.signInWithGoogle();
-      print(credential.user!.displayName);
-      return credential;
+      await _userRepository.signInWithGoogle();
+      return;
       // Handle successful sign-in
     } catch (e) {
       throw Exception(e);

@@ -1,7 +1,8 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:newsapp_bionic/features/userauth/domain/entity/userauth_entity.dart';
 
 abstract class UserAuthRepository {
-  Future<UserCredential> signInWithGoogle();
+  Future<void> signInWithGoogle();
+  Future<UserAuthEntity> getDataUserAuth();
 }

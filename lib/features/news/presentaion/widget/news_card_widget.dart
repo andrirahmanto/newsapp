@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:newsapp_bionic/features/news/domain/entity/news_entity.dart';
+import 'package:newsapp_bionic/features/news/presentaion/controller/news_controller.dart';
 
 import '../../../../app/theme.dart';
 
 class NewsCardWidget extends StatelessWidget {
+  final NewsEntity newsEntity;
+  final NewsController _newsController = Get.find();
+  NewsCardWidget({super.key, required this.newsEntity});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.toNamed("/detail"),
+      onTap: () {
+        _newsController.selectNews(newsEntity);
+        Get.toNamed("/detail");
+      },
       child: Container(
         width: double.infinity,
         margin: EdgeInsets.all(defaultMargin).copyWith(bottom: 0),
@@ -22,7 +31,7 @@ class NewsCardWidget extends StatelessWidget {
                 topRight: Radius.circular(10),
               ),
               child: Image.network(
-                'https://cdn0-production-images-kly.akamaized.net/ISgcRvNjvTerGCMXO5F-X8xOz50=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/4787088/original/051855900_1711590836-6.jpg',
+                newsEntity.urlToImage,
                 width: double.infinity,
                 height: 150,
                 fit: BoxFit.cover,
@@ -34,12 +43,12 @@ class NewsCardWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "13 Maret 2020",
+                    newsEntity.publishedAt,
                     style: grayTextStyle.copyWith(
                         fontSize: 13, fontWeight: FontWeight.w500),
                   ),
                   Text(
-                    "13 Potret Kendaraan Mewah Harvey Moeis dan Sandra Dewi, Jet Pribadi 270 Miliar - Berderet Mobil Puluhan Miliar",
+                    newsEntity.title,
                     style: blackTextStyle.copyWith(
                         fontSize: 15, fontWeight: FontWeight.w600),
                   ),

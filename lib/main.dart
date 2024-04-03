@@ -6,6 +6,7 @@ import 'package:newsapp_bionic/features/news/presentaion/page/detail_news_page.d
 import 'package:newsapp_bionic/features/news/presentaion/page/news_page.dart';
 
 import 'app/dependency.dart';
+import 'features/news/presentaion/controller/news_binding.dart';
 import 'features/userauth/presentaion/controller/login_binding.dart';
 import 'features/userauth/presentaion/page/login_page.dart';
 import 'firebase_options.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/news',
           page: () => NewsPage(),
+          binding: NewsBinding(),
         ),
         GetPage(
           name: '/detail',

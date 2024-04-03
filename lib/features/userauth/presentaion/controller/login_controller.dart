@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:local_auth/local_auth.dart';
+import 'package:newsapp_bionic/features/userauth/domain/entity/userauth_entity.dart';
+import 'package:newsapp_bionic/features/userauth/domain/usecase/get_data_userauth.dart';
 
 import '../../domain/usecase/google_sign_in_use_case.dart';
 
 class LoginController extends GetxController {
-  LoginController(this._googleSignInUseCase);
+  LoginController(this._googleSignInUseCase, this._getDataUserAuthUseCase);
   final GoogleSignInlUseCase _googleSignInUseCase;
-  final LocalAuthentication auth = LocalAuthentication();
-
-  final TextEditingController emailController = TextEditingController(text: "");
-  final TextEditingController passwordController =
-      TextEditingController(text: "");
+  final GetDataUserAuthUseCase _getDataUserAuthUseCase;
+  late Rx<UserAuthEntity> userAuthEntity;
 
   @override
   void onInit() {
@@ -22,7 +19,8 @@ class LoginController extends GetxController {
   Future<void> loginWithGoogleSignIn() async {
     try {
       await _googleSignInUseCase.signInWithGoogleSignIn();
-      // Handle successful sign-in
+      userAuthEntity =
+          Rx<UserAuthEntity>(await _getDataUserAuthUseCase.getDataUserAuth());
       Get.toNamed('/news');
     } catch (e) {
       final snackBar = SnackBar(
