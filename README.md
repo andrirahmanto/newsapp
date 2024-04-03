@@ -26,11 +26,11 @@ Setelah selesai menginstal, Anda dapat menjalankan aplikasi dengan langkah-langk
 Sebelum menjalankan aplikasi, pastikan untuk memeriksa hal-hal berikut:
 
 - Pastikan perangkat Anda terhubung dengan internet.
-- Pastikan emulator atau perangkat fisik Anda memiliki versi minimum Android X.X.X atau iOS X.X.X.
+- Pastikan emulator atau perangkat fisik Anda memiliki versi minimum Android X.X.X
 
 
 ## Lampiran
 
-Anda dapat mengunduh versi APK terbaru dari aplikasi ini di lampiran [di sini](link-ke-apk-release).
+Anda dapat mengunduh versi APK terbaru dari aplikasi ini di lampiran [di sini](https://drive.google.com/file/d/1Ai-YZdPosRARpZRKoMPBIIh1k-mWgBcP/view?usp=sharing).
 
 Jika Anda mengalami masalah saat menginstal atau menjalankan aplikasi, jangan ragu untuk menghubungi kami di [rahmanto660@gmail.com](mailto:rahmanto660@gmail.com).
